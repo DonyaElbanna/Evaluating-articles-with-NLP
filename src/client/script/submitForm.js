@@ -1,4 +1,4 @@
-function submitForm(event) {
+export function submitForm(event) {
     event.preventDefault()
 
     let url = document.getElementById('form').value
