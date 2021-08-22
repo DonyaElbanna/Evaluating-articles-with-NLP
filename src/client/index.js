@@ -3,5 +3,5 @@ import { submitForm } from './script/submitForm'
 
 alert('Hello there!')
 
-console.log(checkURL)
-console.log(submitForm)
+console.log('::: checkURL :::', checkURL)
+console.log('::: submitForm :::', submitForm)
