@@ -6,7 +6,7 @@ export function submitForm(event) {
     // console.log("::: Form Submitted :::")
     // console.log(url)
 
-    if(checkURL(url)) {
+    if(Client.checkURL(url)) {
         fetch('http://localhost:8081/test')
         .then(res => res.json())
         .then(function(res) {

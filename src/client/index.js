@@ -10,3 +10,9 @@ import './style/header.scss'
 
 console.log('::: checkURL :::', checkURL)
 console.log('::: submitForm :::', submitForm)
+
+
+export {
+    checkURL,
+    submitForm
+}
