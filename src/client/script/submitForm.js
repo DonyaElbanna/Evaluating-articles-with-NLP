@@ -15,7 +15,10 @@ export function submitForm(event) {
             document.getElementById('time').innerHTML = res.time
     })
     } else {
+        document.getElementById('title').innerHTML = null
         document.getElementById('message').innerHTML = 'no messages'
+        document.getElementById('time').innerHTML = null
+
     }
 
     
