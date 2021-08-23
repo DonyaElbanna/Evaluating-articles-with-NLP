@@ -1,7 +1,12 @@
 import { checkURL } from './script/checkURL'
 import { submitForm } from './script/submitForm'
 
-alert('Hello there!')
+import './style/base.scss'
+import './style/footer.scss'
+import './style/form.scss'
+import './style/header.scss'
+
+// alert('Hello there!')
 
 console.log('::: checkURL :::', checkURL)
 console.log('::: submitForm :::', submitForm)
