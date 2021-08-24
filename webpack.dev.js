@@ -31,7 +31,6 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,  //starting from webpack 5, instead of clean-webpack-plugin
     libraryTarget: 'var',
     library: 'Client'
   },
