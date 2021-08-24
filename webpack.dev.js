@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: {
-    index: './src/client/index.js'
-  },
+  entry: ['@babel/polyfill', './src/client/index.js'],
   devtool: 'inline-source-map',
   module: {
     rules: [
