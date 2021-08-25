@@ -1,5 +1,7 @@
+$bkg-color: peachpuff;
+
 body {
-    background-color: peachpuff;
+    background-color: $bkg-color;
     height:100%;
     margin: 0;
     padding: 0;

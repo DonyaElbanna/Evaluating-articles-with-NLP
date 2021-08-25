@@ -1,20 +1,36 @@
+@mixin theme($theme: rgb(255, 228, 204)) {
+    background: $theme;
+    border: 3px dotted #8f1111;
+}
+
+
 p, form, button {
     text-align: center;
 }
 
-p {
-    font-size: 20px;
+section {
+    p {
+        font-size: 20px;
+    }
+    .form {
+        margin-top: 80px;
+        font-size: 20px;
+    }
+    input {
+        width: 300px;
+    }
+    
 }
 
-.form {
-    margin-top: 80px;
-    font-size: 20px;
+section {
+    strong {
+        text-decoration: underline 2px wavy #000000;
+    }
+    #results {
+    @include theme;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+}
 }
 
-input {
-    width: 300px;
-}
-
-strong {
-    text-decoration-line: underline;
-}

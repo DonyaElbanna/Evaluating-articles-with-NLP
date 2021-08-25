@@ -41,20 +41,20 @@ const API_KEY = process.env.API_KEY;
 app.post('/add', async (req, res) => {
   let url = req.body.url
     axios.post(`${baseURL}?key=${API_KEY}&url=${url}&lang=en`, 
-    {headers: {
-        "Content-Type": "application/json"
-    }})
-    .then(function (response) {
-        let data = {
-            agreement : response.data.agreement,
-            subjectivity : response.data.subjectivity,
-            confidence : response.data.confidence,
-            irony : response.data.irony
-        }
-        res.send(data);
-    console.log('response:', data);
-    })
-    .catch (function (error) {
-        console.log('error', error);
-    })
+        {headers: {
+            "Content-Type": "application/json"
+        }})
+        .then(function (response) {
+            let data = {
+                agreement : response.data.agreement,
+                subjectivity : response.data.subjectivity,
+                confidence : response.data.confidence,
+                irony : response.data.irony
+            }
+            res.send(data);
+            console.log('response:', data);
+        })
+        .catch (function (error) {
+            console.log('error', error);
+        })
 });
