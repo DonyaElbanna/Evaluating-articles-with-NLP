@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");  //optimizes css
 const TerserPlugin = require("terser-webpack-plugin");  //optimizes js
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -33,6 +34,12 @@ module.exports = {
       template: "./src/client/view/index.html"
     }),
     new MiniCssExtractPlugin(),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
