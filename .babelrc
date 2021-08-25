@@ -1,0 +1,8 @@
+//in order for jest to support es6 import
+{
+    "env": {
+      "test": {
+        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+      }
+    }
+  }

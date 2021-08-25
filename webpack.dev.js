@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  //babel-polyfill to be able to use async
   entry: ['@babel/polyfill', './src/client/index.js'],
   devtool: 'source-map',
   module: {
@@ -27,13 +27,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/client/view/index.html"
-    }),
-    // new WorkboxPlugin.GenerateSW({
-    //   // these options encourage the ServiceWorkers to get in there fast
-    //   // and not allow any straggling "old" SWs to hang around
-    //   clientsClaim: true,
-    //   skipWaiting: true,
-    // }),
+    })
   ],
   output: {
     filename: '[name].bundle.js',
@@ -41,5 +35,7 @@ module.exports = {
     libraryTarget: 'var',
     library: 'Client',
     clean: true
+    //starting from webpack 5, instead of clean-webpack-plugin
+    //This clears the dist after every successful build
   },
 };
