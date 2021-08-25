@@ -6,10 +6,8 @@ import './style/footer.scss'
 import './style/form.scss'
 import './style/header.scss'
 
-// alert('Hello there!')
-
-console.log('::: checkURL :::', checkURL)
-console.log('::: submitForm :::', submitForm)
+// console.log('::: checkURL :::', checkURL)
+// console.log('::: submitForm :::', submitForm)
 
 
 export {
