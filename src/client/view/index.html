@@ -14,19 +14,21 @@
     <script type="text/javascript" src="../../../dist/index.bundle.js"></script> -->
 </head>
 <body>
-    <h1 class="header">Evaluate news articles </h1>
+    <header>My Header</header>
+    <h1 class="title">Evaluate news articles </h1>
     <h1>with Natural Language Processing</h1>
     <section>
         <p class="form">Enter an article URL here to evaluate</p>
         <form>
-            <input placeholder="http://" value="" id="form"/>
+            <input placeholder="http://" value="" id="form" onfocus="this.value=''"/>
             <button  type="submit" onclick="return Client.submitForm(event)">Submit</button>
         </form>
     </section>
     <section>
         <div id='results'>
-            <p><strong>Result:</strong></p>
+            <p id="result"><strong>Result:</strong></p>
             <p id="evaluating">Enter a URL to begin the evaluation</p>
+            <p id="polarity"></p>
             <p id="agreement"></p>
             <p id="subjectivity"></p>
             <p id="confidence"></p>
@@ -34,7 +36,7 @@
         </div>
     </section>
     <footer>
-        Donya © 2021
+        My Footer
     </footer>
     <script>
         // Check that service workers are supported

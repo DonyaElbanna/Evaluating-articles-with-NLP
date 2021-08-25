@@ -46,13 +46,14 @@ app.post('/add', async (req, res) => {
         }})
         .then(function (response) {
             let data = {
+                polarity : response.data.score_tag,
                 agreement : response.data.agreement,
                 subjectivity : response.data.subjectivity,
                 confidence : response.data.confidence,
                 irony : response.data.irony
             }
             res.send(data);
-            // console.log('response:', data);
+            console.log('response:', data);
         })
         .catch (function (error) {
             console.log('error', error);

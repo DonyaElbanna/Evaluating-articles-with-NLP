@@ -3,8 +3,7 @@
     border: 3px dotted #8f1111;
 }
 
-
-p, form, button {
+ .form, form, button, #evaluating, #result {
     text-align: center;
 }
 
@@ -22,9 +21,13 @@ section {
     
 }
 
+#polarity, #agreement, #subjectivity, #confidence, #irony {
+    margin-left: 20px;
+}
+
 section {
     strong {
-        text-decoration: underline 2px wavy #000000;
+        text-decoration: underline 2px #000000;
     }
     #results {
     @include theme;
