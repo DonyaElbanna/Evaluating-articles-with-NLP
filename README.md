@@ -41,14 +41,16 @@ Run tests by `npm run test`
 
 `> jest`
 
-`PASS __test__/testCheckURL.spec.js (11.18 s)`
-`PASS __test__/testSubmitForm.spec.js (11.662 s)`
+```
+PASS **test**/testCheckURL.spec.js (11.18 s)
+PASS **test**/testSubmitForm.spec.js (11.662 s)
 
-`Test Suites: 2 passed, 2 total`
-`Tests: 5 passed, 5 total`
-`Snapshots: 0 total`
-`Time: 14.454 s`
-`Ran all test suites.`
+Test Suites: 2 passed, 2 total
+Tests: 5 passed, 5 total
+Snapshots: 0 total
+Time: 14.454 s
+Ran all test suites.
+```
 
 ## Built With
 
@@ -63,23 +65,29 @@ Run tests by `npm run test`
 
 ## Demo
 
-Home page
-![Home page](./demo/home.jpg?raw=true "Home Page")
+#### Home page
 
-Analyzing article
-![Analysis process](./demo/eval.jpg?raw=true "Analysis Process")
+![Home page](demo/home.PNG)
 
-Analysis result
-![Analysis result](./demo/eval.jpg?raw=true "Analysis Result")
+#### Analyzing article
 
-Network Error (Stopping the server on port 8081)
-![Network error](./demo/error.jpg?raw=true "Network Error")
+![Analysis process](demo/eval.PNG)
 
-Entering strings
-![URL validity](./demo/url.jpg?raw=true "URL Validity")
+#### Analysis result
 
-Entering a bad URL (doesn't direct to a real webpage)
-![URL validity](./demo/incURL.jpg?raw=true "URL Validity")
+![Analysis result](demo/result.PNG)
+
+#### Network Error (Stopping the server on port 8081)
+
+![Network error](demo/error.PNG)
+
+#### Entering strings
+
+![URL validity](demo/url.PNG)
+
+#### Entering a bad URL (doesn't direct to a real webpage)
+
+![URL validity](demo/incUrl.PNG)
 
 ### Acknowledgments
 
@@ -125,4 +133,4 @@ https://webpack.js.org/guides/asset-management/#loading-images
 
 https://stackoverflow.com/questions/47126503/how-to-load-images-through-webpack-when-using-htmlwebpackplugin
 
-https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
+https://guides.github.com/features/mastering-markdown/
