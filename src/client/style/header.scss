@@ -1,7 +1,8 @@
-header {
+nav {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 30px;
   text-align: center;
   background-color: rgb(218, 187, 160);
 }
@@ -18,4 +19,9 @@ header {
   top: 0;
   right: 0;
   margin-right: 50px;
+  margin-top: 8px;
+}
+
+.nav-title {
+  margin-top: 8px;
 }

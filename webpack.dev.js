@@ -1,13 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
-let htmlPageNames = ['index', 'about'];
-let multipleHtmlPlugins = htmlPageNames.map(name => {
+let htmlPageNames = ["index", "about"];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
     template: `./src/client/view/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
-    // chunks: [`${name}`] // respective JS files
-  })
+  });
 });
 
 module.exports = {
@@ -31,13 +31,22 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/client/view/index.html",
-      // chunks: ['main']
-    })
+    }),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
   ].concat(multipleHtmlPlugins),
   output: {
     filename: "[name].bundle.js",

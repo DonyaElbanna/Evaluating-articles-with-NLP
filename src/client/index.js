@@ -6,6 +6,8 @@ import "./style/footer.scss";
 import "./style/form.scss";
 import "./style/header.scss";
 
+import "./view/logo.png";
+
 // console.log('::: checkURL :::', checkURL)
 // console.log('::: submitForm :::', submitForm)
 
