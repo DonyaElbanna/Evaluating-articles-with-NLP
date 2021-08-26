@@ -1,18 +1,14 @@
 $bkg-color: peachpuff;
 
 body {
-    background-color: $bkg-color;
-    height:100%;
-    margin: 0;
-    padding: 0;
-
+  background-color: $bkg-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    color: rgb(33, 42, 121);
-    text-align: center;
-  }
-  
-  .title {
-    margin-top: 50px;
-  }
+  color: rgb(33, 42, 121);
+  text-align: center;
+  margin-top: 70px;
+}

@@ -1,39 +1,49 @@
 @mixin theme($theme: rgb(255, 228, 204)) {
-    background: $theme;
-    border: 3px dotted #8f1111;
+  background: $theme;
+  border: 3px dotted #8f1111;
 }
 
- .form, form, button, #evaluating, #result {
-    text-align: center;
-}
-
-section {
-    p {
-        font-size: 20px;
-    }
-    .form {
-        margin-top: 80px;
-        font-size: 20px;
-    }
-    input {
-        width: 300px;
-    }
-    
-}
-
-#polarity, #agreement, #subjectivity, #confidence, #irony {
-    margin-left: 20px;
+.form,
+form,
+button,
+#evaluating,
+#result {
+  text-align: center;
 }
 
 section {
-    strong {
-        text-decoration: underline 2px #000000;
-    }
-    #results {
+  p {
+    font-size: 20px;
+  }
+  .form {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+  input {
+    width: 300px;
+  }
+}
+
+#polarity,
+#agreement,
+#subjectivity,
+#confidence,
+#irony {
+  margin-left: 20px;
+}
+
+section {
+  strong {
+    text-decoration: underline 2px #000000;
+  }
+  #results {
     @include theme;
-    width: 50%;
+    width: 33%;
     margin: auto;
     margin-top: 40px;
+  }
+  #evaluating {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
-}
-
