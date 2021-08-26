@@ -5,12 +5,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin"); //optimizes 
 const TerserPlugin = require("terser-webpack-plugin"); //optimizes js
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
-//to render multiple html files
 let htmlPageNames = ["index", "about"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
   return new HtmlWebpackPlugin({
-    template: `./src/client/view/${name}.html`, // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
+    template: `./src/client/view/${name}.html`,
+    filename: `${name}.html`,
   });
 });
 
@@ -48,8 +47,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true,
     }),
