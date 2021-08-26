@@ -57,7 +57,7 @@ app.post("/add", async (req, res) => {
         irony: response.data.irony,
       };
       res.send(data);
-      console.log("response:", data);
+      // console.log("response:", data);
     })
     .catch(function (error) {
       console.log("error", error);

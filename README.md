@@ -12,7 +12,7 @@ For more information about the API, visit https://learn.meaningcloud.com/develop
 
 ## Description
 
-- Project starts with building the HTML file with the SCSS and JavaScript files.
+- Project starts with building the HTML files with the SCSS and JavaScript files.
 - Setting up Webpack with loaders and plugins.
 - Using meaning cloud to request for the Sentiment Analysis API data.
 - Using jest to run tests.
@@ -23,15 +23,14 @@ For more information about the API, visit https://learn.meaningcloud.com/develop
 1. Clone repo by `git clone <repo>` or download ZIP.
 2. Move to the project folder by `cd <folder path/name>`
 3. Install npm by `npm install`
-4. Run the productiom build by `npm run build-prod`
+4. Run the production build by `npm run build-prod`
 5. Start the server at port 8081 by `npm run start`
 6. To run the development build, use `npm run build-dev`
-7. To start the development server at port 8080, user `npm run dev-server`
+7. To start the development server at port 8080, use `npm run dev-server`
 
 ## Prerequisites
 
-1. sign in to https://www.meaningcloud.com/developer/sentiment-analysis to get your API KEY
-
+1. sign in to https://www.meaningcloud.com/developer/sentiment-analysis to get your API KEY.
 2. In your root folder, create a .env file, and put your key as
    `API_KEY = ********************************`
 
@@ -57,6 +56,7 @@ Ran all test suites.
 - HTML
 - SCSS
 - JavaScript
+- Node
 - Express
 - Webpack 5
 - Meaningcloud API
