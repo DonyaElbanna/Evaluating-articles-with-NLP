@@ -65,7 +65,10 @@ export async function submitForm(event) {
             : (data.style.display = "block");
         }
       })
-      .catch((error) => console.log("ERROR: ", error));
+      .catch(
+        (error) =>
+          (Eval.innerHTML = "Network Error: You're not connected to the server")
+      );
   } else {
     Eval.innerHTML = "Not a valid URL!";
   }

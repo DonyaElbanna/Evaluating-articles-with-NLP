@@ -6,10 +6,16 @@ header {
   background-color: rgb(218, 187, 160);
 }
 
-#logo {
+.logo {
   position: absolute;
   top: 0;
   left: 0;
   margin-left: 50px;
-  background-color: rgb(218, 187, 160);
+}
+
+.about-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 50px;
 }

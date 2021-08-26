@@ -1,7 +1,9 @@
+$bkg-color: rgb(218, 187, 160);
+
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: rgb(218, 187, 160);
+  background-color: $bkg-color;
 }

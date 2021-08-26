@@ -1,6 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+let htmlPageNames = ['index', 'about'];
+let multipleHtmlPlugins = htmlPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/client/view/${name}.html`, // relative path to the HTML files
+    filename: `${name}.html`, // output HTML files
+    // chunks: [`${name}`] // respective JS files
+  })
+});
+
 module.exports = {
   mode: "development",
   //babel-polyfill to be able to use async
@@ -27,8 +36,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/client/view/index.html",
-    }),
-  ],
+      // chunks: ['main']
+    })
+  ].concat(multipleHtmlPlugins),
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),

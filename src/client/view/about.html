@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NLP</title>
+    <!-- <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/form.css">
+    <link rel="stylesheet" href="../style/footer.css"> -->
+</head>
+<body>
+    <header>
+        <div>About</div>
+        <div class='logo'>Logo</div>
+        <a class='about-link' href='index.html'>Home</a>
+    </header>
+    <h1 class="title">NLP using meaning cloud's </br>Sentiment Analysis API</h1>
+    <section class='about'>
+            <p>
+                Sentiment Analysis is MeaningCloud's solution for performing
+                a detailed multilingual sentiment analysis of texts from different sources.
+            </p>
+            <p>
+                It identifies the positive, negative, neutral polarity in any text,
+                including comments in surveys and social media. It also extracts sentiment
+                at the document or aspect-based level. In order to do this, the local
+                polarity of the different sentences in the text is identified and the
+                relationship between them evaluated, resulting in a global polarity
+                value for the whole text.
+            </p>
+        <p> <span>Differentiators:</span>
+            <ul>
+                <li>
+                    It extracts aspect-based sentiment.
+                </li>
+                <li>
+                    It distinguishes facts and opinions.
+                </li>
+                <li>
+                    It detects irony and polarity disagreement.
+                </li>
+            </ul>
+        </p>
+        <p>For more information, visit 
+            <a href='https://www.meaningcloud.com/developer/sentiment-analysis' target='_blank'>
+                Sentiment Analysis API
+            </a>
+        </p>
+    </section>
+    <footer>
+        Footer
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                    // console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

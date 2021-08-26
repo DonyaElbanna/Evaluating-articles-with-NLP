@@ -7,7 +7,7 @@
 form,
 button,
 #evaluating,
-#result {
+.result {
   text-align: center;
 }
 
@@ -36,7 +36,7 @@ section {
   strong {
     text-decoration: underline 2px #000000;
   }
-  #results {
+  .results {
     @include theme;
     width: 33%;
     margin: auto;
